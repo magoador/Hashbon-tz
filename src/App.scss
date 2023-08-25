@@ -1,0 +1,125 @@
+.App {
+  background: linear-gradient(
+    180deg,
+    rgba(34, 139, 230, 0.01) 0%,
+    rgba(10, 63, 142, 0.01) 100%
+  );
+  min-height: 100vh;
+  backdrop-filter: blur(307.5px);
+  background-image: url("./assets/img/background.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  .App__wrapper {
+    max-width: 50%;
+    margin: 0 auto;
+    padding-top: 35px;
+
+    .App__bText {
+      font-size: 57px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .App__mText {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 26px;
+      color: #fff;
+    }
+
+    .App__chat {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      height: 70vh;
+      border-radius: 16px;
+      border: 1px solid #fff;
+      background: #fff;
+      box-shadow: 0px 2px 31px 13px rgba(10, 63, 142, 0.08);
+      margin-bottom: 38px;
+      padding: 36px 19px;
+
+      .Chat__wrapper {
+        overflow-y: auto;
+
+        .Chat__message {
+          display: flex;
+          gap: 13px;
+          margin-bottom: 17px;
+
+          .Message__logo {
+            background-color: #007afe;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .Message__text {
+            border-radius: 28px;
+            background: rgba(34, 118, 245, 0.2);
+            padding: 12px 20px;
+            font-size: 18px;
+            max-width: 400px;
+            line-height: 155%;
+            font-family: "SF Pro Text";
+          }
+        }
+
+        .MessageYour {
+          flex-direction: row-reverse;
+          justify-content: flex-start;
+
+          .Message__text {
+            background-color: #007afe;
+            color: #fff;
+          }
+
+          .Message__logo {
+            background-color: #d3e4fd;
+          }
+        }
+      }
+    }
+
+    .App__input {
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0px 2px 31px 13px rgba(10, 63, 142, 0.08);
+        border: 1px solid #fff;
+        font-size: 20px;
+        font-weight: 400;
+        outline: none;
+        font-family: "Inter", sans-serif;
+
+        &::placeholder {
+          color: #ced0d6;
+        }
+      }
+
+      button {
+        cursor: pointer;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        width: 40px;
+        height: 40px;
+        border-radius: 24px;
+        background-color: #007afe;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+      }
+    }
+  }
+}
